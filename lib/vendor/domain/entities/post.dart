@@ -1,9 +1,11 @@
+import 'package:http/http.dart' as http;
+
 class Post {
   final String? id;
   final String? userId;
   final String? title;
-  final String? thumbnailImage;
-  final String? images;
+  final http.MultipartFile? thumbnailImage;
+  final List<http.MultipartFile>? images;
   final String? description;
   final String? location;
   final String? ipAddress;
