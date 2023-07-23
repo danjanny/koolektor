@@ -3,12 +3,12 @@ import 'package:koolektor/vendor/presentation/manager/add_post_cubit/add_post_st
 import 'package:koolektor/vendor/domain/entities/post.dart';
 
 class AddPostCubit extends Cubit<AddPostState> {
-  Post? _post;
+  Post? post;
 
   AddPostCubit() : super(InitialAddPostState());
 
-  Future<void> saveState(Post? post) async {
-    _post = post; // update _post state
+  Future<void> saveState(Post? postModel) async {
+    post = postModel; // update _post state
   }
 
   Future<void> submitPost() async {}

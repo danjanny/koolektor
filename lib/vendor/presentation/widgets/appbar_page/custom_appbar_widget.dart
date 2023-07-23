@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:koolektor/utils/config.dart';
 import 'package:koolektor/utils/custom_colors.dart';
 
 class CustomAppBarWidget extends StatelessWidget {
