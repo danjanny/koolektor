@@ -17,10 +17,8 @@ class MainViewWidget extends StatelessWidget {
         body: Center(
       child: Container(
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-            border: Border.all(color: viewportUtil.edgeBorderColor!)),
         constraints: BoxConstraints(
-            maxHeight: viewportUtil.maxHeight!,
+            maxHeight: MediaQuery.of(context).size.height,
             maxWidth: viewportUtil.maxWidth),
         child: mainViewWidget,
       ),
