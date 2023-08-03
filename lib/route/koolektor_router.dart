@@ -17,7 +17,7 @@ class KoolektorRouter {
 
   static final routes = <QRoute>[
     QRoute(path: addTitlePage, builder: () => AddTitlePage()),
-    QRoute(path: addThumbnailPage, builder: () => const AddThumbnailPage()),
+    QRoute(path: addThumbnailPage, builder: () => AddThumbnailPage()),
     QRoute(path: addImagesPage, builder: () => const AddImagesPage()),
     QRoute(path: addLocationPage, builder: () => const AddLocationPage()),
     QRoute(path: reviewDataPage, builder: () => const ReviewDataPage()),
