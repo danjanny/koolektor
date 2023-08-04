@@ -18,7 +18,9 @@ class AppBarContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        mainView!,
+        Container(
+          margin: EdgeInsets.only(top: 80.0),
+            child: mainView!),
         Positioned(
           left: 0.0,
           right: 0.0,

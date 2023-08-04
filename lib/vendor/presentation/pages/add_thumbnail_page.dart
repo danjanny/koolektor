@@ -38,21 +38,27 @@ class AddThumbnailPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(
-                  onTap: () async {
-                    _openCamera();
-                  },
-                  child: Container(
-                    color: Colors.grey.withOpacity(0.50),
-                    width: viewportUtil.maxWidth * 0.75,
-                    height: 200,
-                    child: const Center(
-                      child: Icon(Icons.image, size: 50.0),
+                Expanded(
+                  flex: 1,
+                  child: GestureDetector(
+                    onTap: () async {
+                      _openCamera();
+                    },
+                    child: Container(
+                      color: Colors.grey.withOpacity(0.50),
+                      width: viewportUtil.maxWidth * 0.75,
+                      height: 200,
+                      child: const Center(
+                        child: Icon(Icons.image, size: 50.0),
+                      ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 20.0,
+                Expanded(
+                  flex: 1,
+                  child: SizedBox(
+                    height: 20.0,
+                  ),
                 ),
                 CustomSaveButton(
                   text: 'Save & Continue',

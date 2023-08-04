@@ -39,8 +39,9 @@ class _AddTitlePageState extends State<AddTitlePage> {
   Widget build(BuildContext context) {
     return MainViewWidget(
       mainViewWidget: AppBarContainer(
-          appBarText: 'Add Title',
-          mainView: Form(
+        appBarText: 'Add Title',
+        mainView: SingleChildScrollView(
+          child: Form(
             key: _addTitleForm,
             child: Container(
               margin: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -69,15 +70,19 @@ class _AddTitlePageState extends State<AddTitlePage> {
                             description: _descController.text);
 
                         context.read<AddPostCubit>().saveState(postModel);
-                        QR.navigator
-                            .replaceLastName(KoolektorRouter.addThumbnailPage);
+                        // QR.navigator
+                        //     .replaceLastName(KoolektorRouter.addThumbnailPage);
+                        QR.navigator.pushName(KoolektorRouter.addThumbnailPage);
+                        // QR.navigator.pushName(KoolektorRouter.addImagesPage);
                       }
                     },
                   )
                 ],
               ),
             ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
